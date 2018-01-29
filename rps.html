@@ -7,7 +7,7 @@
 	<script>
 		var compSelect = ""
         var playerSelect = ""
-
+        /* This section takes a random number from 1 - 9.99 and has the computer select rock, paper, or scissors*/
 		function compChoice() {
 			let oppSelect = Math.random() * 10;
 			if (oppSelect < 3) {
@@ -21,13 +21,13 @@
 			}
 			
 		}
-
+		/* Retrieves players choice from prompt box*/
         function playerChoice() {
         	playerSelect = prompt("Enter Rock, Scissors, or Paper");
         	playerSelect = playerSelect.toLowerCase()
         }
 
-
+        /*Actual game function with all variations accounted for*/
         function game() {
         	playerChoice()
         	compChoice()
@@ -60,6 +60,7 @@
         		}
         	}
         }
+        /*calling game function*/
         game()
 
     </script>
