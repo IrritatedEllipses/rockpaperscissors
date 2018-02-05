@@ -1,68 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Simple Rock, Paper, Scissors</title>
 </head>
 <body>
 	<script>
-		var compSelect = ""
-        var playerSelect = ""
-        /* This section takes a random number from 1 - 9.99 and has the computer select rock, paper, or scissors*/
-		function compChoice() {
-			let oppSelect = Math.random() * 10;
-			if (oppSelect < 3) {
-				compSelect = "rock";
-			}
-			else if (oppSelect >= 3 && oppSelect < 6) {
-				compSelect = "paper";
-			}
-			else {
-				compSelect = "scissors";
-			}
-			
-		}
-		/* Retrieves players choice from prompt box*/
-        function playerChoice() {
-        	playerSelect = prompt("Enter Rock, Scissors, or Paper");
-        	playerSelect = playerSelect.toLowerCase()
-        }
 
-        /*Actual game function with all variations accounted for*/
-        function game() {
-        	playerChoice()
-        	compChoice()
-        	if (compSelect === playerSelect) {
-        		alert("It's a tie!")
-        	}
-        	else if (playerSelect === "rock") {
-        		if (compSelect === "scissors") {
-        			alert("Computer chose Scissors! You win!")
-        		}
-        		else {
-        			alert("Computer chose paper, you lose!")
-        		}
-        	}
-        	else if (playerSelect === "paper") {
-        		if (compSelect === "rock") {
-        			alert("Computer chose rock! You win!")
-        		}
-        		else {
-        			alert("Computer chose Scissors! You lose!")
-        		}
-
-        	}
-        	else if (playerSelect === "scissors") {
-        		if (compSelect === "paper") {
-        			alert("Computer chose Paper! You win!")
-        		}
-        		else {
-        			alert("Computer chose Rock! You lose!")
-        		}
-        	}
-        }
-        /*calling game function*/
-        game()
-
-    </script>
+  </script>
 </body>
 </html>
